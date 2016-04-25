@@ -1,0 +1,28 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:  A brower sends and recieves requests from clients and servers, exchanging information.
+
+client: computer/user
+server: remote host
+render: does an action or interprets html code
+
+What is HTML? In your answer, include definitions of the following: HyperText Markup Language, code that computers/servers can render/interperet correctly.
+
+tag: an indicator to render something in a given way, ex: <strong> makes text bold
+element: individual piece of html code ex: <p>
+node: linked with the "DOM" html tree structure, its an element that includes elements, attributes, documents etc.
+attribute: either modifies an element or describes the element.
+block element: uses the entire width of page, always starts new line
+inline element:only uses space necessary for text, doesn't start new line
+Very briefly, explain the purpose of the following elements:
+head:top of the page
+body: meat/text of the page
+p: paragraph
+form: starts interactive form with user
+div: divider, block element
+span: spans x amount of pixels, inline
+select: creates dropdown box of selections
+h2:bigger headder than h1
+ol:orderedlist
+ul:unorderedlist
+table:chart divided into rows and table data
+tr:table row
+td:table data
