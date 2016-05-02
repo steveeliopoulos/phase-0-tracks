@@ -1,0 +1,33 @@
+#figure{ 
+position: fixed; 
+left: 50%;
+width: 300px;
+margin-left: -150px;
+
+}
+#octopus{ 
+position: absolute; 
+padding-top: 100px;
+left: 50%;
+width: 300px;
+margin-left: -150px;
+
+} 
+#glasses { 
+position: absolute; 
+z-index:2; 
+left: 50%;
+top:220px;
+width: 300px;
+margin-left: -150px;
+ 
+} 
+#hat{ 
+position:absolute; 
+z-index:3; 
+display:inline-block; 
+margin: 0 auto;  
+top: 50px; 
+left:20px;
+
+} 
