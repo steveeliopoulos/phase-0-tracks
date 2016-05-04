@@ -1,0 +1,9 @@
+-Move forward until you reach the elevator button.
+-If desired floor is above current floor level, 
+	-select upwards pointing arrow.
+-If desired floor is below you,
+	-select downwards pointing arrow.
+-Wait outside elevator until doors open.
+-Once doors open, enter elevator.
+-Select desired floor number.
+-Exit elevator once desired floor number is reached and doors have opened.
