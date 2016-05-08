@@ -1,3 +1,6 @@
+
+
+
 def encrypt(string)
 
 	# Initizlize count to zero (outside of the while loop)
@@ -49,8 +52,24 @@ def decrypt(string)
 end
 
 
+#ask the user whether they want to encrypt or decrypt a password
+puts "Would you like to encrypt (E) or decrypt (D) a password"
+preference = gets.chomp
+#asks user for password
+puts "Enter password: "
+password = gets.chomp
+#call method depending on user input
+if preference.eql?("E")
+	encrypt(password)
+elsif preference.eql?("D")
+	decrypt(password)
+else
+	puts "Invalid input, try again"
+end
 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
+#decrypt(encrypt("swordfish"))
+#Swordfish encryption works due to order of operations.
+#encrypt("abc")
+#encrypt("zed")
+#decrypt("bcd")
+#decrypt("afe")
