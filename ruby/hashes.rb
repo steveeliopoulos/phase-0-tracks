@@ -29,9 +29,19 @@ hash = {
 
 #Ask for input edits. Convert input to symbol.
 
-puts "Changed your mind about an input? feel free to edit answers calling on either, name, age, num_children, decor, or hardwood.  Otherwise, input 'none'."
-user_edit=gets.chomp.to_sym
+puts "Changed your mind about an input? Feel free to edit answers calling on either, name, age, num_children, decor, or hardwood.  Otherwise, input 'none'."
+user_edit=gets.chomp
+hash[:name]
 
+
+if user_edit == "none"
+	puts "Thanks!"
+	puts hash
+elsif 
+	puts "What would you like to change it to? "
+	new_input=gets.chomp
+	hash[user_edit]=new_input
+end
 #Print results.
 
-puts hash
+puts hash[new_input]
