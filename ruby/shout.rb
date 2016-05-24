@@ -1,0 +1,3 @@
+module Shout
+	empty
+end
