@@ -28,6 +28,7 @@ class Pitcher
 		@type = type
 		@velocity = velocity
 		@handedness = handedness
+		@fresh_arms = fresh_arms
 	end
 
 	def pitch_ball
@@ -52,7 +53,7 @@ end
 pitchers = []
 
 pitcher_counter = 1
-
+@fresh_arms = fresh_arms
 puts "Please input how many pitchers you'd like to create: 1-100 please."
 	num_pitchers=gets.chomp.to_i
 
@@ -66,13 +67,14 @@ while pitcher_counter <= num_pitchers
 	fresh_arms = Pitcher.new(type, velocity, handedness)
 	pitchers.push(fresh_arms)
 	pitcher_counter += 1
-	@fresh_arms = fresh_arms
+	
+end
 
 puts "List of new pitchers you've created!"
 fresh_arms.each do 
 	puts fresh_arms
 	puts "Here's a #{type} who can throw #{velocity} MPH and is a #{handedness}"
 
-end
+
 end
 
