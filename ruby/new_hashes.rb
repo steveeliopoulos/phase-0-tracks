@@ -43,11 +43,28 @@ client_info [:additional_requests] = additional_requests
 p "Would you like to change any of your inputs? If not, enter 'none'..."
 edit_key = gets.chomp
 client_info [:edit_key] = edit_key
+	
+
+	if edit_key == 'name'
+		puts "What's the new client name?"
+		new_name = gets.chomp
+		client_info [:name] = new_name
+		puts client_info
+	elsif edit_key == 'age'
+		puts "What's the new client age?"
+		new_age = gets.chomp.to_i
+		client_info [:age] = new_age
+		puts client_info
+	elsif edit_key == 'number of children'
+		puts "How many children do they really have?"
+		new_num_children = gets.chomp
+		client_info [:num_children] = new_num_children
+		puts client_info
+	else
+		puts "Oops, didn't recognize that request, please try again"
+	end
+	
 	if edit_key == 'none'
 		puts client_info
-	elsif
-		puts "What would you like to change"
-		mod
 	end
-
 	
