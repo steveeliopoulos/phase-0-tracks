@@ -1,7 +1,7 @@
 class Santa
 	attr_reader :name
-	attr_accessor :age, :gender, :ethnicity, :reindeer_ranking,
-	def initialize(gender, ethnicity)
+	attr_accessor :age, :ethnicity, :gender, :reindeer_ranking,
+	def initialize(gender, ethnicity, age)
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -9,12 +9,14 @@ class Santa
 		p 'initializing santa instance'
 	end
 
+
+
 	def speak
-		puts 'Ho ho ho happy holidays!'
+		p 'Ho ho ho happy holidays!'
 	end
 
 	def eat(cookie_type)
-		puts "That was a good #{cookie_type}"	
+		p "That was a good #{cookie_type}"	
 	end
 
 	def celebrate_birthday
@@ -37,21 +39,38 @@ end
 
 # claus = Santa.new
 # claus.speak
-# claus.eat(')
+# claus.eat
 
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
+santas << Santa.new("agender", "black", 0)
+p santas
+santas << Santa.new("female", "Latino", 0)
+p santas
+santas << Santa.new("bigender", "white", 0)
+p santas
+santas << Santa.new("male", "Japanese", 0)
+p santas
+santas << Santa.new("female", "prefer not to say", 0)
+p santas
+santas << Santa.new("gender fluid", "Mystical Creature (unicorn)", 0)
+p santas
 
-# santas = []
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
+santas.celebrate_birthday
+santas.gender_changer('female')
+
+
+
+
+newsantas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+  newsantas << Santa.new(example_genders.sample(i), example_ethnicities.sample(i))
+  p newsantas
+
+end
+50.times do |i|
+  randomsantas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(0...140))
+end
+p randomsantas
 
