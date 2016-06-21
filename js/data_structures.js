@@ -23,30 +23,34 @@ for (i=0; i<colors.length; i++){
 }
 console.log(hash);
 
-var shelby = {make: 'ford', model: 'mustang', year: 2016}
+// var shelby = {make: 'ford', model: 'mustang', year: 2016}
 
 function Car(make, model, year) {
-	var newcar;
-	console.log("Car initialization complete", newcar);
+	var newcar = {};
+	console.log("Car initialization complete");
 	newcar.make = make;
 	newcar.model = model;
 	newcar.year = year;
 
-	newcar.burnout = function() {console.log("***BURNOUT!***")};
+	newcar.burnout = function() {
+		console.log("***BURNOUT!***");
+		return ' ';
+	}
+	return newcar
 }
 
 	// my.burnout = function() { console.log("The " + my.name + " did a burnout!"); };
 	
 
-console.log('lets build a car..');
-var anotherCar = new Car('dodge', 'challenger', 2015);
-console.log(anotherCar);
-anotherCar.burnout();
-console.log(' -- ')
+// console.log('lets build a car..');
+// var anotherCar = new Car('dodge', 'challenger', 2015);
+// console.log(anotherCar);
+// anotherCar.burnout();
+// console.log(' -- ')
 
-// = new Car('ford', 'mustang', '2016');
-// console.log(shelby);
-// console.log(shelby.burnout);
+var shelby = new Car('ford', 'mustang', '2016');
+console.log(shelby);
+console.log(shelby.burnout());
 
 
 
