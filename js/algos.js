@@ -3,7 +3,7 @@ function longestString(arrayOfWords) {
 
 
 // Initialize variables to compare word length with index
-	var longestWord = 0;
+	var longestWord = '';
 	var longestIdx = 0;
 	var i;
 
@@ -11,9 +11,9 @@ function longestString(arrayOfWords) {
 // *** getting 'unexpected token error', not expecting ')' after this i++ for some reason....
 	for (i=0; i<arrayOfWords.length; i++) {
 		// Find out if string at each index is greater than next
-		if (arrayOfWords.length > longestWord){		
+		if (arrayOfWords[i].length > longestWord.length){		
 	
-			longestWord = arrayOfWords[i].length;// if this new element is longer than the previous update the variables
+			longestWord = arrayOfWords[i];// if this new element is longer than the previous update the variables
 			longestIdx = i;
 		}
 	}
